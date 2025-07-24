@@ -7,6 +7,7 @@ function _init()
         speed = 1.25
     })
     n = nature:new({})
+    init_objects(f, n)
 end
 
 function _update()
