@@ -103,25 +103,11 @@ farmer = entity:new({
             -- movement end
         end
 
-        -- trying to figure out best way to set action_tile to encompass all functionality s
-
-        -- set action str
-        for e in all(obj_tbl) do
-            if (self.action_tile.num == e.num) then
-                self.action_tile.str = e.str
-            end
-            if obj_tbl[self.action_tile.num] then
-                self.action_tile.str = obj_tbl[self.action_tile.num]
-            end
-        end
+        selected_object = obj_tbl[mget(n_cell.x, n_cell.y)]
 
         -- on Btn press
         if btnp(5) then
-            for e in all(obj_tbl) do
-                if (self.action_tile.num == e.num) then
-                    e.action()
-                end
-            end
+            selected_object.action()
         end
     end,
 
@@ -129,8 +115,8 @@ farmer = entity:new({
         rectfill(100, 0, 127, 10, 13)
         -- action btn
         rect(100, 0, 127, 10, 1)
-        if self.action_tile.str then
-            print(f.action_tile.str, 105, 3, 7)
+        if selected_object then
+            print(selected_object.str, 105, 3, 7)
         end
     end,
     draw_inv = function(self)
