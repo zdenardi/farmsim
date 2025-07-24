@@ -1,5 +1,5 @@
 This entire project is for the Pico8 
-Whats the pico8, its [this][[an_awesome_website_link](https://www.lexaloffle.com/pico-8.php)].
+Whats the pico8, its [this][https://www.lexaloffle.com/pico-8.php]
 
 #Farm Sim
 A demake of harvest moon/stardew valley. 
